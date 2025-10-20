@@ -1,0 +1,79 @@
+/* effects.css */
+
+/* Transforms */
+.tile {
+  width: 160px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #e6eef8;
+  border-radius: var(--radius);
+  transition: transform 0.4s ease;
+}
+.tile.rotate:hover {
+  transform: rotate(12deg);
+}
+.tile.scale:hover {
+  transform: scale(1.08);
+}
+.tile.translate:hover {
+  transform: translateY(-10px);
+}
+
+/* Advanced Effects */
+.gradient-text {
+  background: linear-gradient(90deg, #f97316, #9f7aea);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* required for Safari */
+  color: transparent;
+
+  font-weight: 800;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid #e6eef8;
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive utilities */
+.hide-sm {
+  display: block;
+}
+@media (max-width: 640px) {
+  .hide-sm {
+    display: none;
+  }
+}
+
+.show-sm {
+  display: none;
+}
+@media (max-width: 640px) {
+  .show-sm {
+    display: block;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0b1220;
+    color: #e2e8f0;
+  }
+  .card {
+    background: #1e293b;
+    color: #e2e8f0;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 1 – Selectors</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <style>
+      p {
+        color: #0f172a;
+      }
+      .highlight {
+        background: #e6f7ff;
+        padding: 0.2rem 0.4rem;
+        border-radius: 6px;
+      }
+      #featured {
+        border-left: 4px solid var(--accent);
+        padding-left: 0.8rem;
+      }
+      a[target="_blank"] {
+        text-decoration: underline dotted;
+      }
+      li:nth-child(odd) {
+        background: #f8fafc;
+      }
+      h2::after {
+        content: " •";
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container card">
+      <h2 id="featured">Selectors Practice</h2>
+      <p class="highlight">Class selector example</p>
+      <p>ID selector applied above</p>
+      <a href="#" target="_blank">Attribute selector</a>
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+    </div>
+  </body>
+</html>

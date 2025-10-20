@@ -1,0 +1,83 @@
+/* components.css */
+
+/* Buttons */
+.btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: var(--accent);
+}
+
+.btn.round {
+  border-radius: 999px;
+}
+.btn.small {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.7rem;
+}
+.btn.large {
+  font-size: 1.05rem;
+  padding: 0.9rem 1.2rem;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form Inputs */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(43, 108, 176, 0.15);
+}
+
+/* Cards & Grid */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  color: var(--muted);
+}
+
+.navbar a:hover {
+  background: #fff;
+  box-shadow: var(--shadow);
+  color: var(--accent);
+}

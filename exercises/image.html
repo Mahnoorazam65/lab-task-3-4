@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 4 – Image Styling</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <style>
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+      }
+      .thumb {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .thumb img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s, filter 0.3s;
+      }
+      .thumb:hover img {
+        transform: scale(1.05);
+        filter: brightness(0.9);
+      }
+      .thumb .overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: end;
+        padding: 1rem;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+        color: #fff;
+      }
+      .round {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #fff;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container card gallery">
+      <div class="thumb">
+        <img src="../images/gallery/img1.jpg" alt="" />
+        <div class="overlay">Hover zoom</div>
+      </div>
+      <div class="thumb">
+        <img src="../images/gallery/img2.jpeg" alt="" />
+        <div class="overlay">Filter</div>
+      </div>
+      <div>
+        <img src="../images/gallery/avatar.jpeg" alt="" class="round" />
+        <p class="text-center">Circular avatar</p>
+      </div>
+    </div>
+  </body>
+</html>
